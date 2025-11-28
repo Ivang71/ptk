@@ -340,7 +340,7 @@
 
           <div class="actions">
             <a class="btn-primary" href="https://t.me/the_potok_bot" target="_blank" rel="noopener noreferrer">
-              Open The Potok Bot
+              <span id="lng-open-btn">Open The Potok Bot</span>
               <span>↗</span>
             </a>
           </div>
@@ -400,8 +400,7 @@
     </main>
 
     <footer>
-      <div id="lng-footer-1">For evaluation and integration discussions only. Functionality can be tailored to your bank’s policies and jurisdiction.</div>
-      <div><span id="lng-contact-label">Contact:</span> <a href="mailto:info@example.com">info@example.com</a></div>
+      <div id="lng-footer-1">This page is intended for technical and compliance review. The bot is an assistant and its results must be checked before use.</div>
     </footer>
   </div>
   <script>
@@ -437,11 +436,11 @@
           howStep2: "Step 2",
           howStep3: "Step 3",
           howStep4: "Step 4",
+          openBtn: "Open The Potok Bot",
           linkLabel: "Current bot link",
           linkName: "The Potok Bot",
           linkEnv: "Production",
-          footer1: "For evaluation and integration discussions only. Functionality can be tailored to your bank’s policies and jurisdiction.",
-          contactLabel: "Contact:"
+          footer1: "This page is intended for technical and compliance review. The bot is an assistant and its results must be checked before use."
         },
         ru: {
           pageTitle: "Бот «Поток» — помощник по поиску людей",
@@ -471,11 +470,11 @@
           pillUse: "Назначение",
           pillDecisions: "Принятие решений",
           pillData: "Какие данные не запрашивает",
+          openBtn: "Открыть бота",
           linkLabel: "Текущая ссылка на бота",
           linkName: "Бот «Поток»",
           linkEnv: "Основной бот",
-          footer1: "Страница предназначена для оценки и обсуждения интеграции. Функциональность может быть адаптирована под политику и юрисдикцию вашей организации.",
-          contactLabel: "Контакт:"
+          footer1: "Страница предназначена для технического и комплаенс‑ознакомления. Бот выступает помощником, его ответы не являются рекомендацией и должны проверяться перед использованием."
         }
       };
       var locale = isRu ? "ru" : "en";
@@ -492,6 +491,7 @@
       setText("lng-eyebrow", "eyebrow");
       setText("lng-title", "title");
       setText("lng-subtitle", "subtitle");
+      setText("lng-open-btn", "openBtn");
       var bullets = document.getElementById("lng-bullets");
       if (bullets && Array.isArray(d.bullets)) {
         bullets.innerHTML = "";
@@ -527,7 +527,6 @@
       setText("lng-link-name", "linkName");
       setText("lng-link-env", "linkEnv");
       setText("lng-footer-1", "footer1");
-      setText("lng-contact-label", "contactLabel");
     })();
   </script>
 </body>
