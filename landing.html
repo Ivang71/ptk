@@ -379,6 +379,10 @@
               <span id="lng-use-3">The bot does not ask for card numbers, passwords or other highly sensitive payment data and is not used to execute or confirm payments.</span>
               <span class="pill" id="lng-pill-data">Data it avoids</span>
             </li>
+            <li>
+              <span id="lng-use-4">Payment is charged as a subscription: 300 RUB for 30 calendar days of unlimited bot usage, with no automatic renewal.</span>
+              <span class="pill" id="lng-pill-pricing">Pricing</span>
+            </li>
           </ul>
 
           <div class="section-label" id="lng-link-label">Current bot link</div>
@@ -405,7 +409,7 @@
       var isRu = lang.startsWith("ru");
       var dict = {
         en: {
-          pageTitle: "The Potok Bot – Lead Intake Assistant for Banks",
+          pageTitle: "Potok",
           backLink: "← Back to links",
           title: "The Potok Bot in Telegram",
           subtitle: "The Potok Bot is a Telegram chat bot for people search. You send a short description of a role and company (for example, \"Head of e‑commerce at XYZ\" or \"Director of Sales, Shopify\"), and the bot looks for matching people on the open internet and returns likely full names and possible work emails.",
@@ -427,6 +431,8 @@
           pillUse: "Intended use",
           pillDecisions: "Decision making",
           pillData: "Data it avoids",
+          use4: "Payment is charged as a subscription: 300 RUB for 30 calendar days of unlimited bot usage from the moment of purchase. There is no automatic renewal; to continue using the bot after that period, a new payment is required.",
+          pillPricing: "Pricing",
           howStep1: "Step 1",
           howStep2: "Step 2",
           howStep3: "Step 3",
@@ -438,7 +444,7 @@
           footer1: "This page is intended for technical and compliance review. The bot is an assistant and its results must be checked before use."
         },
         ru: {
-          pageTitle: "Бот «Поток» — помощник по поиску людей",
+          pageTitle: "Поток",
           backLink: "← Назад к ссылкам",
           eyebrow: "Простое описание работы бота",
           title: "Бот «Поток» в Telegram",
@@ -465,6 +471,8 @@
           pillUse: "Назначение",
           pillDecisions: "Принятие решений",
           pillData: "Какие данные не запрашивает",
+          use4: "Оплата взимается по модели подписки: 300 ₽ за 30 календарных дней неограниченного использования бота с момента оплаты. Автопродления нет — по окончании периода при необходимости оформляется новая оплата.",
+          pillPricing: "Оплата",
           openBtn: "Открыть бота",
           linkLabel: "Текущая ссылка на бота",
           linkName: "Бот «Поток»",
@@ -518,6 +526,8 @@
       setText("lng-pill-use", "pillUse");
       setText("lng-pill-decisions", "pillDecisions");
       setText("lng-pill-data", "pillData");
+      setText("lng-use-4", "use4");
+      setText("lng-pill-pricing", "pillPricing");
       setText("lng-link-label", "linkLabel");
       setText("lng-link-name", "linkName");
       setText("lng-link-env", "linkEnv");
