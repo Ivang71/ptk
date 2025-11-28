@@ -142,30 +142,69 @@
 </head>
 <body>
   <div class="card">
-    <h1>The Potok Bot</h1>
-    <p class="subtitle">
+    <h1 id="idx-title">The Potok Bot</h1>
+    <p class="subtitle" id="idx-subtitle">
       Telegram-based assistant used to collect structured client requests in a consistent way.
     </p>
 
-    <div class="section-label">Current bot link</div>
+    <div class="section-label" id="idx-bot-section">Current bot link</div>
     <div class="links">
       <a class="link-card" href="https://t.me/the_potok_bot" target="_blank" rel="noopener noreferrer">
         <div>
-          <div>The Potok Bot</div>
+          <div id="idx-bot-name">The Potok Bot</div>
           <div class="link-handle">t.me/the_potok_bot</div>
         </div>
-        <span class="pill">Production</span>
+        <span class="pill" id="idx-bot-env">Production</span>
       </a>
     </div>
 
-    <div class="section-label">For reviewers</div>
+    <div class="section-label" id="idx-review-section">For reviewers</div>
     <div class="actions">
       <a class="btn btn-primary" href="./landing.html">
-        Detailed description
+        <span id="idx-btn-landing">Detailed description</span>
         <span>↗</span>
       </a>
     </div>
   </div>
+  <script>
+    (function () {
+      var lang = (navigator.language || navigator.userLanguage || "").toLowerCase();
+      var isRu = lang.startsWith("ru");
+      var dict = {
+        en: {
+          title: "The Potok Bot",
+          subtitle: "Telegram-based assistant used to collect structured client requests in a consistent way.",
+          botSection: "Current bot link",
+          botName: "The Potok Bot",
+          botEnv: "Production",
+          reviewSection: "For reviewers",
+          btnLanding: "Detailed description"
+        },
+        ru: {
+          title: "Бот «Поток»",
+          subtitle: "Телеграм‑бот, который использует поиск в интернете и ИИ, чтобы подсказать подходящих людей и рабочие e‑mail.",
+          botSection: "Текущая ссылка на бота",
+          botName: "Бот «Поток»",
+          botEnv: "Основной бот",
+          reviewSection: "Для проверяющих",
+          btnLanding: "Подробное описание"
+        }
+      };
+      var locale = isRu ? "ru" : "en";
+      var d = dict[locale];
+      function set(id, key) {
+        var el = document.getElementById(id);
+        if (el && d[key]) el.textContent = d[key];
+      }
+      set("idx-title", "title");
+      set("idx-subtitle", "subtitle");
+      set("idx-bot-section", "botSection");
+      set("idx-bot-name", "botName");
+      set("idx-bot-env", "botEnv");
+      set("idx-review-section", "reviewSection");
+      set("idx-btn-landing", "btnLanding");
+    })();
+  </script>
 </body>
 </html>
 

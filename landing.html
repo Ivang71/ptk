@@ -301,24 +301,24 @@
 <body>
   <div class="page">
     <header>
-      <a class="back-link" href="./index.html">← Back to links</a>
+      <a class="back-link" href="./index.html" id="lng-back-link">← Back to links</a>
     </header>
 
     <main>
       <div class="shell">
         <section class="panel">
-          <div class="eyebrow">
+          <div class="eyebrow" id="lng-eyebrow">
             <div class="badge-dot"></div>
             Plain description of how the bot works
           </div>
-          <h1>The Potok Bot in Telegram</h1>
-          <p class="subtitle">
+          <h1 id="lng-title">The Potok Bot in Telegram</h1>
+          <p class="subtitle" id="lng-subtitle">
             The Potok Bot is a Telegram chat bot for people search. You send a short description of a role
             and company (for example, “Head of e‑commerce at XYZ” or “Director of Sales, Shopify”), and the bot
             looks for matching people on the open internet and returns likely full names and possible work emails.
           </p>
 
-          <ul class="bullets">
+          <ul class="bullets" id="lng-bullets">
             <li>
               <span class="tick">✓</span>
               <span>Works as a normal Telegram chat, no extra applications or registrations are required.</span>
@@ -346,52 +346,52 @@
         </section>
 
         <section class="panel">
-          <div class="section-label">How a typical conversation works</div>
+          <div class="section-label" id="lng-how-label">How a typical conversation works</div>
           <ol class="list">
             <li>
-              <span>The user opens the bot in Telegram and writes what they know about the person: job position, company, and any other useful details.</span>
-              <span class="pill">Step 1</span>
+              <span id="lng-how-1">The user opens the bot in Telegram and writes what they know about the person: job position, company, and any other useful details.</span>
+              <span class="pill" id="lng-how-step-1">Step 1</span>
             </li>
             <li>
-              <span>The bot sends the text to its backend, which prepares search queries and looks for relevant public information on the internet.</span>
-              <span class="pill">Step 2</span>
+              <span id="lng-how-2">The bot sends the text to its backend, which prepares search queries and looks for relevant public information on the internet.</span>
+              <span class="pill" id="lng-how-step-2">Step 2</span>
             </li>
             <li>
-              <span>Search results are analysed by language models that try to identify the most likely person or several candidates for the described role.</span>
-              <span class="pill">Step 3</span>
+              <span id="lng-how-3">Search results are analysed by language models that try to identify the most likely person or several candidates for the described role.</span>
+              <span class="pill" id="lng-how-step-3">Step 3</span>
             </li>
             <li>
-              <span>The bot replies in the Telegram chat with a short summary: names, positions and possible work email addresses, or a message that nothing suitable was found.</span>
-              <span class="pill">Step 4</span>
+              <span id="lng-how-4">The bot replies in the Telegram chat with a short summary: names, positions and possible work email addresses, or a message that nothing suitable was found.</span>
+              <span class="pill" id="lng-how-step-4">Step 4</span>
             </li>
           </ol>
         </section>
 
         <section class="panel">
-          <div class="section-label">Intended use and limitations</div>
+          <div class="section-label" id="lng-use-label">Intended use and limitations</div>
           <ul class="list">
             <li>
-              <span>Intended for sales, business development, recruiting and similar teams that need a quick starting point for contacting potential clients or candidates.</span>
-              <span class="pill">Intended use</span>
+              <span id="lng-use-1">Intended for sales, business development, recruiting and similar teams that need a quick starting point for contacting potential clients or candidates.</span>
+              <span class="pill" id="lng-pill-use">Intended use</span>
             </li>
             <li>
-              <span>The bot is an information and research helper. It does not make binding decisions or approvals and its output should be checked before use.</span>
-              <span class="pill">Decision making</span>
+              <span id="lng-use-2">The bot is an information and research helper. It does not make binding decisions or approvals and its output should be checked before use.</span>
+              <span class="pill" id="lng-pill-decisions">Decision making</span>
             </li>
             <li>
-              <span>The bot does not ask for card numbers, passwords or other highly sensitive payment data and is not used to execute or confirm payments.</span>
-              <span class="pill">Data it avoids</span>
+              <span id="lng-use-3">The bot does not ask for card numbers, passwords or other highly sensitive payment data and is not used to execute or confirm payments.</span>
+              <span class="pill" id="lng-pill-data">Data it avoids</span>
             </li>
           </ul>
 
-          <div class="section-label">Current bot link</div>
+          <div class="section-label" id="lng-link-label">Current bot link</div>
           <div class="bots">
             <a class="bot-link" href="https://t.me/the_potok_bot" target="_blank" rel="noopener noreferrer">
               <div>
-                <strong>The Potok Bot</strong><br>
+                <strong id="lng-link-name">The Potok Bot</strong><br>
                 <span class="bot-handle">t.me/the_potok_bot</span>
               </div>
-              <span class="pill">Production</span>
+              <span class="pill" id="lng-link-env">Production</span>
             </a>
           </div>
         </section>
@@ -399,10 +399,136 @@
     </main>
 
     <footer>
-      <div>For evaluation and integration discussions only. Functionality can be tailored to your bank’s policies and jurisdiction.</div>
-      <div>Contact: <a href="mailto:info@example.com">info@example.com</a></div>
+      <div id="lng-footer-1">For evaluation and integration discussions only. Functionality can be tailored to your bank’s policies and jurisdiction.</div>
+      <div><span id="lng-contact-label">Contact:</span> <a href="mailto:info@example.com">info@example.com</a></div>
     </footer>
   </div>
+  <script>
+    (function () {
+      var lang = (navigator.language || navigator.userLanguage || "").toLowerCase();
+      var isRu = lang.startsWith("ru");
+      var dict = {
+        en: {
+          pageTitle: "The Potok Bot – Lead Intake Assistant for Banks",
+          backLink: "← Back to links",
+          eyebrow: "Plain description of how the bot works",
+          title: "The Potok Bot in Telegram",
+          subtitle: "The Potok Bot is a Telegram chat bot for people search. You send a short description of a role and company (for example, \"Head of e‑commerce at XYZ\" or \"Director of Sales, Shopify\"), and the bot looks for matching people on the open internet and returns likely full names and possible work emails.",
+          bullets: [
+            "Works as a normal Telegram chat, no extra applications or registrations are required.",
+            "You can write any combination of job title, company name and extra hints in free text.",
+            "For each query, the bot uses external search and language models to analyse public internet sources.",
+            "It responds with candidates: full name, role and one or two likely work email patterns based on the name and domain."
+          ],
+          howLabel: "How a typical conversation works",
+          how1: "The user opens the bot in Telegram and writes what they know about the person: job position, company, and any other useful details.",
+          how2: "The bot sends the text to its backend, which prepares search queries and looks for relevant public information on the internet.",
+          how3: "Search results are analysed by language models that try to identify the most likely person or several candidates for the described role.",
+          how4: "The bot replies in the Telegram chat with a short summary: names, positions and possible work email addresses, or a message that nothing suitable was found.",
+          useLabel: "Intended use and limitations",
+          use1: "Intended for sales, business development, recruiting and similar teams that need a quick starting point for contacting potential clients or candidates.",
+          use2: "The bot is an information and research helper. It does not make binding decisions or approvals and its output should be checked before use.",
+          use3: "The bot does not ask for card numbers, passwords or other highly sensitive payment data and is not used to execute or confirm payments.",
+          pillUse: "Intended use",
+          pillDecisions: "Decision making",
+          pillData: "Data it avoids",
+          howStep1: "Step 1",
+          howStep2: "Step 2",
+          howStep3: "Step 3",
+          howStep4: "Step 4",
+          linkLabel: "Current bot link",
+          linkName: "The Potok Bot",
+          linkEnv: "Production",
+          footer1: "For evaluation and integration discussions only. Functionality can be tailored to your bank’s policies and jurisdiction.",
+          contactLabel: "Contact:"
+        },
+        ru: {
+          pageTitle: "Бот «Поток» — помощник по поиску людей",
+          backLink: "← Назад к ссылкам",
+          eyebrow: "Простое описание работы бота",
+          title: "Бот «Поток» в Telegram",
+          subtitle: "«Поток» — это телеграм‑бот для поиска людей по должности и компании. Вы пишете краткое описание роли и компании (например, «руководитель e‑commerce в XYZ» или «директор по продажам Shopify»), а бот с помощью интернет‑поиска и моделей ИИ находит подходящих людей и предлагает возможные рабочие e‑mail.",
+          bullets: [
+            "Работает как обычный чат в Telegram, дополнительная установка приложений или регистрация не требуются.",
+            "Вы можете писать любую комбинацию должности, компании и уточняющих деталей в свободной форме.",
+            "Для каждого запроса бот использует внешние поисковые сервисы и языковые модели для анализа открытых источников в интернете.",
+            "В ответ бот присылает кандидатов: ФИО, должность и один‑два возможных варианта рабочего e‑mail на основе имени и домена."
+          ],
+          howLabel: "Как обычно проходит диалог",
+          how1: "Пользователь открывает бота в Telegram и пишет всё, что знает о человеке: должность, компанию и любые полезные детали.",
+          how2: "Бот передаёт текст на бэкенд, где формируются поисковые запросы и выполняется поиск по открытым источникам в интернете.",
+          how3: "Результаты поиска анализируются моделями ИИ, которые пытаются выделить наиболее вероятного человека или несколько кандидатов для указанной роли.",
+          how4: "Бот отвечает в чате кратким резюме: ФИО, должности и возможные рабочие адреса e‑mail, либо сообщает, что подходящих вариантов не найдено.",
+          howStep1: "Шаг 1",
+          howStep2: "Шаг 2",
+          howStep3: "Шаг 3",
+          howStep4: "Шаг 4",
+          useLabel: "Назначение и ограничения",
+          use1: "Предназначен для команд продаж, развития бизнеса, рекрутинга и других, кому нужен быстрый старт для контакта с потенциальными клиентами или кандидатами.",
+          use2: "Бот выступает помощником по поиску информации. Он не принимает юридически значимые решения, и результаты должны проверяться перед использованием.",
+          use3: "Бот не запрашивает номера карт, пароли и другие чувствительные платёжные данные и не используется для проведения или подтверждения платежей.",
+          pillUse: "Назначение",
+          pillDecisions: "Принятие решений",
+          pillData: "Какие данные не запрашивает",
+          linkLabel: "Текущая ссылка на бота",
+          linkName: "Бот «Поток»",
+          linkEnv: "Основной бот",
+          footer1: "Страница предназначена для оценки и обсуждения интеграции. Функциональность может быть адаптирована под политику и юрисдикцию вашей организации.",
+          contactLabel: "Контакт:"
+        }
+      };
+      var locale = isRu ? "ru" : "en";
+      var d = dict[locale];
+      if (!d) return;
+      function setText(id, key) {
+        var el = document.getElementById(id);
+        if (el && d[key]) el.textContent = d[key];
+      }
+      if (d.pageTitle) {
+        document.title = d.pageTitle;
+      }
+      setText("lng-back-link", "backLink");
+      setText("lng-eyebrow", "eyebrow");
+      setText("lng-title", "title");
+      setText("lng-subtitle", "subtitle");
+      var bullets = document.getElementById("lng-bullets");
+      if (bullets && Array.isArray(d.bullets)) {
+        bullets.innerHTML = "";
+        d.bullets.forEach(function (txt) {
+          var li = document.createElement("li");
+          var tick = document.createElement("span");
+          tick.className = "tick";
+          tick.textContent = "✓";
+          var span = document.createElement("span");
+          span.textContent = txt;
+          li.appendChild(tick);
+          li.appendChild(span);
+          bullets.appendChild(li);
+        });
+      }
+      setText("lng-how-label", "howLabel");
+      setText("lng-how-1", "how1");
+      setText("lng-how-2", "how2");
+      setText("lng-how-3", "how3");
+      setText("lng-how-4", "how4");
+      setText("lng-how-step-1", "howStep1");
+      setText("lng-how-step-2", "howStep2");
+      setText("lng-how-step-3", "howStep3");
+      setText("lng-how-step-4", "howStep4");
+      setText("lng-use-label", "useLabel");
+      setText("lng-use-1", "use1");
+      setText("lng-use-2", "use2");
+      setText("lng-use-3", "use3");
+      setText("lng-pill-use", "pillUse");
+      setText("lng-pill-decisions", "pillDecisions");
+      setText("lng-pill-data", "pillData");
+      setText("lng-link-label", "linkLabel");
+      setText("lng-link-name", "linkName");
+      setText("lng-link-env", "linkEnv");
+      setText("lng-footer-1", "footer1");
+      setText("lng-contact-label", "contactLabel");
+    })();
+  </script>
 </body>
 </html>
 
